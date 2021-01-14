@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DURA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section
+      class="apotek"
+      style="
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        font-size: 50px;
+        font-weight: 600;
+      "
+    >
+      APOTEK OBAT
+    </section>
+
+    <table>
+      <tr>
+        <td>
+          <!--HTML form for crud operation-->
+          <form autocomplete="off" onsubmit="onFormSubmit()">
+            <div>
+              <label for="nama">Nama Obat</label>
+              <input type="text" name="nama" id="nama" />
+            </div>
+            <div>
+              <label for="harga">Harga</label>
+              <input type="number" name="harga" id="harga" />
+            </div>
+            <div>
+              <label for="telepon">Nomor Telepon</label>
+              <input type="number" name="telepon" id="telepon" />
+            </div>
+            <div>
+              <label for="city">Kota</label>
+              <input type="text" name="city" id="city" />
+            </div>
+            <div class="form_action--button">
+              <input type="submit" value="Submit" />
+              <input type="reset" value="Reset" />
+            </div>
+          </form>
+        </td>
+        <td>
+          <table class="list" id="obatList">
+            <thead>
+              <tr>
+                <th>Nama Obat</th>
+                <th>Harga</th>
+                <th>Nomor Telepon</th>
+                <th>Kota</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <script src="./script.js"></script>
+  </body>
+</html>
