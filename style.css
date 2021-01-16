@@ -1,45 +1,59 @@
-body > table {
-  width: 80%;
-  margin: 40px auto;
-  background-color: lightblue;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-table {
+
+body {
+  font-family: sans-serif;
+}
+
+form {
+  margin: 50px 10%;
+}
+
+@media (max-width: 768px) {
+  form {
+    margin: 50px auto;
+  }
+}
+
+.content-table {
   border-collapse: collapse;
+  margin: 25px auto;
+  font-size: 0.9em;
+  min-width: 80vw;
 }
-table.list {
-  width: 100%;
-  margin-top: -25.6%;
-}
-td,
-th {
-  border: 1px solid #ddd;
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
   text-align: left;
-  padding: 8px 15px;
+  font-weight: bold;
 }
-tr:nth-child(even),
-table.list thead > tr {
-  background-color: #ddd;
+
+.content-table th:first-child {
+  border-radius: 5px 0 0 0;
 }
-input[type="text"],
-input[type="number"] {
-  width: 91%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+
+.content-table th:last-child {
+  border-radius: 0 5px 0 0;
 }
-input[type="submit"],
-input[type="reset"] {
-  background: #eee;
-  padding: 6px 12px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 30px;
-  border: none;
-  margin: 15px 0 10px;
-  outline: none;
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
 }
-input[type="submit"]:hover {
-  background: #f3f3f3;
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
 }
